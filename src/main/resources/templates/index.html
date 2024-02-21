@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom CSS */
+        .navbar {
+            padding: 20px 0;
+        }
+        .navbar-brand {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .nav-link {
+            font-size: 18px;
+            margin-right: 20px;
+        }
+	* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+    }
+    
+    .container {
+      max-width: 500px;
+      margin: 50px auto;
+      padding: 30px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #333;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 15px;
+      margin-bottom: 20px;
+      border: none;
+      border-bottom: 2px solid #ccc;
+      background-color: transparent;
+      transition: border-bottom-color 0.3s ease;
+      font-size: 16px;
+    }
+    
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="password"]:focus {
+      border-bottom-color: #007bff;
+    }
+    
+    input[type="submit"] {
+      width: 100%;
+      padding: 15px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 18px;
+      transition: background-color 0.3s ease;
+    }
+    
+    input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+    
+    .error-message {
+      color: #ff0000;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#"><img src="/static/images/c.jpg" alt="Your brand"></a>
+       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link btn btn-primary" href="/Navlogin">Login</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+	<br>
+	<br>
+	<br>
+<div class="container">
+    <h2>Register</h2>
+    <form  action="/register" method="post" id="registrationForm">
+      <div>
+        <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+      </div>
+      <div>
+        <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+      </div>
+      <div>
+        <input type="email" id="email" name="email" placeholder="Email" required>
+      </div>
+      <div>
+        <input type="password" id="password" name="password" placeholder="Password" required>
+      </div>
+      <div>
+        <input type="submit" value="Register">
+      </div>
+    </form>
+    <div class="error-message" id="errorMessage"></div>
+  </div>
+<!--
+  <script>
+    const registrationForm = document.getElementById('registrationForm');
+    const errorMessage = document.getElementById('errorMessage');
+    
+    registrationForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+      const firstName = document.getElementById('firstName').value;
+      const lastName = document.getElementById('lastName').value;
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      
+      if (firstName.trim() === '' || lastName.trim() === '' || email.trim() === '' || password.trim() === '') {
+        errorMessage.textContent = 'All fields are required';
+      } else {
+        // Perform further validation if needed
+        
+        // Simulate registration process (replace this with actual registration logic)
+        setTimeout(() => {
+          alert('Registration successful!');
+          registrationForm.reset();
+        }, 1000);
+      }
+    });
+  </script>
+-->
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

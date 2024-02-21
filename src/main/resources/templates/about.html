@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<title>Page Title</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+/*navbar css*/
+ .navbar {
+            padding: 20px 0;
+        }
+        .navbar-brand {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .nav-link {
+            font-size: 18px;
+            margin-right: 20px;
+        }
+
+
+
+
+
+/* Column container */
+.row {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  -ms-flex: 30%; /* IE10 */
+  flex: 30%;
+  background-color: #f1f1f2;
+  padding: 20px;
+}
+
+/* Main column */
+.main {   
+  -ms-flex: 70%; /* IE10 */
+  flex: 70%;
+  background-color: whitesmoke;
+  padding: 20px;
+ 
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-color:#f1f1f1;
+  width: 100%;
+  padding: 10px;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+}
+.nav{
+    margin-bottom: 20px;
+}
+p img{
+    width: 300px;
+    height: 200px;
+    margin: auto;
+    border-radius:50%;
+    box-shadow: #aaa; 
+    
+}
+#pro{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.e1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 35px;
+}
+</style>
+</head>
+<body>
+   <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Your Brand</a>
+       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/mabout">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contactus">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link btn btn-primary" href="/mlogin">Login</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+<br>
+<div class="row">
+  <div class="side">
+    <h2>About Me</h2>
+    <h5 style=" border: turquoise; font-size: larger; font-family:Georgia, 'Times New Roman', Times, serif;"> Mr.Shivnath Bhor</h5>
+    <div class="fakeimg1" style="height:200px; width: 100%; padding: 10px;"> <p id="shiv"><img src="/src/main/resources/static/image/c.png" alt="my image" ></p></div>
+    <br>
+    <br>
+    <p>💼    Designer</p>
+    <p>🏠    Pune, Maharashtra India</p>
+    <p>📩    shivnathbhor24@gmail.com</p>
+    <p>📞    8766850241</p>
+    <hr>
+    <h2 style="font-family: Georgia, 'Times New Roman', Times, serif;"> 💡Skills</h2>
+    <label for="file">♨️    Full Stack Developer</label><br>
+    <progress id="file" value="85" max="100" style="height:30px; width: 250px;"> 90% </progress> <br>
+    <label for="file">🛢    Database</label><br>
+    <progress id="file" value="95" max="100" style="height:30px; width: 250px;"> 90% </progress> <br>
+    <label for="file">⚙️    Software Testing</label><br>
+    <progress id="file" value="70" max="100" style="height:30px; width: 250px;"> 80% </progress>
+    
+  </div>
+  <div class="main">
+         <h2 style="font-family: Georgia, 'Times New Roman', Times, serif;">🌟   Summary</h2>
+    <div class="fakeimg" style="height:150px;">
+         <pre style="font-family: Georgia, 'Times New Roman', Times, serif;font-size: medium; margin: auto; margin-top: 30px;">
+                 A motivated and enthusiastic Entry Level Software Engineer seeking an opportunity to utilize my technical skills 
+             and knowledge in software development and debugging. With excellent problem-solving and troubleshooting abilities,
+             I am confident in my capacity to make a substantial contribution to the success of the company. My ultimate goal is
+            to help the team achieve their goals by creating quality andreliable software solutions.
+
+        </pre>
+    </div>
+    <br>
+        <h2 style="font-family: Georgia, 'Times New Roman', Times, serif;"> 📋  Project Experience</h2>
+    <div class="fakeimg" style="height:200px; padding: auto;">
+        <p id="pro">1. Smart Tracking System for School Buses Using NFC and RFID Technology to Enhance
+            Child Safety. (Java, PHP, MySQL)</p>
+        <p id="pro">2. Bank Management and Analysis System for Banking using Java and MySQL.</p>
+        <p id="pro"> 3. Blind Guard Application using Java.</p>
+        <p id="pro">4. Virtual keyboard and mouse using AI Ml.</p>
+        <p id="pro">5. Blood bank management system using PHP, Html, CSS and MySQL. </p>
+    </div>
+    <h2>👨🏻‍🎓   Education</h2>
+    
+  
+     <div class="fakeimg" style="height:200px; padding:10px; display: flex; padding: 10px;">
+            <div class="edu" style="width: 33.33%;height: 150px; background-color: #ddd; margin: 10px; padding-right:10px;">
+                  
+                    <pre class="e1">
+             2023: BE in Computer Engineering
+             Savitribai Phule Pune University
+             from JESITMR,Nashik Maharashtra.        
+             CGPA:7.83
+                    </pre>
+                
+             </div>
+                <div class="edu" style="width: 33.33%;height: 150px;margin: 10px; background-color: #ddd; float: right;">
+                    <pre class="e1">
+     2020: Diploma in Computer Engineering
+     Maharashtra State Board of technical 
+     Education.
+     LGGP Vilholi,Nashik.
+     Percentage:80
+                    </pre>
+               </div>
+               <div class="edu" style="width: 33.33%;height: 150px;margin: 10px; background-color: #ddd; float: right;">
+                <pre class="e1">
+      2017:(X)SSC 
+      New English School Waghere,
+      nashik,Maharashtra.
+      Percentage:72           
+                    </pre>
+               </div>
+
+              
+ 
+  
+    </div>
+</div>
+
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

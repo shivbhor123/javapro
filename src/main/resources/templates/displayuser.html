@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User List</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">User List</h1>
+        <table class="table table-striped mt-3">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Fristname</th>
+                    <th>Lastname</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="user : ${users}">
+                    <td th:text="${user.id}"></td>
+                    <td th:text="${user.firstname}"></td>
+                    <td th:text="${user.lastname}"></td>
+                    <td th:text="${user.email}"></td>
+                   
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!--  delete user div code -->
+     <div class="mt-4">
+        
+        <div class="mt-5" style="text-align: center;height: 4cm; width: 8cm; align-items: center; background-color: whitesmoke;border: solid lightcyan; padding: 20px; margin: 20px auto;">
+       <h3>Delete User</h3>
+        <div class="form-group">
+            <label for="userId">Enter User ID:</label>
+            <input type="text" class="form-control" id="userId" placeholder="User ID">
+        </div>
+        <button type="button" class="btn btn-danger" onclick="deleteUser()" style="text-align: center;">Delete User</button>
+    </div>
+    </div>
+    
+     <!-- JavaScript inline script -->
+ <script th:inline="javascript">
+    function deleteUser() {
+        var userId = document.getElementById("userId").value;
+        if (userId.trim() === "") {
+            alert("Please enter a valid user ID.");
+            return;
+        }
+
+        if (confirm("Are you sure you want to delete user ID " + userId + "?")) {
+            fetch("/deleteUser?id=" + userId, {
+                method: 'DELETE'
+            }).then(response => {
+                if (response.ok) {
+                    // User deleted successfully, refresh the page
+                    window.location.reload();
+                } else {
+                    // Handle error
+                    alert("Failed to delete user.");
+                }
+            }).catch(error => {
+                console.error('Error:', error);
+                alert("Failed to delete user.");
+            });
+        }
+    }
+</script>
+
+</body>
+</html>

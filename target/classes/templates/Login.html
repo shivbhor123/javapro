@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	 <style>
+        /* Custom CSS */
+        body {
+            padding-top: 50px;
+        }
+        .container {
+			padding: 20px auto;
+			margin-top: 1.5cm;
+            width: 13cm;
+            height: fit-content;
+            background-color:whitesmoke ;
+        }
+        .alert {
+            margin-top: 20px;
+        }
+         
+         
+         .navbar-nav {
+    margin-left: auto; /* Push the navbar items to the right on larger screens */
+}
+
+.navbar-toggler {
+    margin-right: 10px; /* Add some margin to the toggler for better spacing */
+}
+
+@media (max-width: 991.98px) {
+    .navbar-nav {
+        margin-left: 0; /* Reset margin for smaller screens */
+    }
+}
+
+
+    </style>
+    <title>Login</title>
+      <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Your Brand</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/Navabout">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/users">Userlist</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link btn btn-primary" href="/Navlogin">Login</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+    
+	 <div class="container">
+    <form action="/logins" method="post">
+       <!-- <input type="email" name="email" placeholder="Email">-->
+         <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" name="email" class="form-control" placeholder="Enter your email address" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" class="form-control" placeholder="Enter your password" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Login</button>
+       <!-- <input type="password" name="Password" placeholder="#*#*#*#*#">-->
+        <!-- Add input fields for password and other necessary fields -->
+        
+    </form>
+    <!-- Display error message if user not found -->
+   <div class="alert" style="background-color: whitesmoke; border-color: #f5c6cb; color: #721c24; padding: 1rem 1.25rem; border: 1px solid transparent; border-radius: .25rem;">
+    <p th:text="${error}" style="margin-bottom: 0;"></p>
+</div>
+      <p class="mt-3 text-center">New user? <a href="/signup">Sign up here</a></p>
+	 </div>
+	 
+	 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
+

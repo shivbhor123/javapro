@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        .contact-info {
+            background-color: #192A56;
+            color: white;
+            padding: 20px;
+        }
+        
+        
+        .social-link {
+    display: inline-block;
+    margin-right: 20px;
+    text-decoration: none;
+    color: #fff; /* Link color */
+}
+
+.social-icon {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #0077B5; /* LinkedIn color */
+    color: #fff; /* Icon color */
+    font-size: 20px;
+    margin-right: 10px;
+    margin-top: 20px;
+}
+.social-icon.github {
+    background-color: #24292e; /* GitHub color */
+}
+.social-icon.youtube {
+    background-color: #FF0000; /* YouTube color */
+}
+.social-icon.facebook {
+    background-color: #3B5998; /* Facebook color */
+}
+
+.contact-info {
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.contact-info span {
+    color: #fff; /* Text color */
+}
+
+
+       /* Container styles */
+.container {
+    width: 500px; /* Limit the maximum width of the container */
+    margin: 50px auto; /* Center the container horizontally */
+    background-color: #fff; /* Set background color for the container */
+    padding: 30px; /* Add padding inside the container */
+    border-radius: 10px; /* Add border radius for rounded corners */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Add box shadow for a subtle effect */
+}
+
+/* Heading styles */
+h1 {
+    text-align: center; /* Center-align the heading */
+    margin-bottom: 30px; /* Add spacing below the heading */
+    color: #333; /* Set color for the heading */
+}
+
+/* Form group styles */
+.form-group {
+    position: relative; /* Position relative for absolute positioning of child elements */
+    margin-bottom: 30px; /* Add spacing between form groups */
+}
+
+/* Symbol styles */
+.symbol {
+    position: absolute; /* Position absolute to place symbols */
+    left: 10px; /* Set left position */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Center vertically */
+    font-size: 20px; /* Set font size */
+    color: #007bff; /* Set color for symbols */
+    pointer-events: none; /* Prevent symbol from being clickable */
+}
+
+/* Input field styles */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: calc(100% - 40px); /* Adjust width to account for symbol */
+    padding: 10px 10px 10px 40px; /* Add padding with left offset for symbols */
+    border: none; /* Remove default border */
+    border-bottom: 2px solid transparent; /* Add bottom border */
+    outline: none; /* Remove outline */
+    font-size: 16px; /* Set font size */
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+/* Label styles */
+label {
+    position: absolute; /* Position absolute for custom label positioning */
+    left: 30px; /* Set left position */
+    bottom: 8px; /* Set bottom position */
+    color: #666; /* Set color for labels */
+    transition: all 0.3s ease-in-out; /* Add transition for smooth animation */
+}
+
+/* Underline styles */
+.underline {
+    position: absolute; /* Position absolute for underline */
+    left: 0; /* Set left position */
+    bottom: 0; /* Align to the bottom */
+    width: 100%; /* Full width */
+    height: 2px; /* Set height for underline */
+    background-color: #007bff; /* Set color for underline */
+    transform: scaleX(0); /* Initially set scale to 0 */
+    transition: transform 0.3s ease-in-out; /* Add transition for smooth animation */
+}
+
+/* Focus styles for labels and underlines */
+input:focus + label,
+textarea:focus + label,
+input:not(:placeholder-shown) + label,
+textarea:not(:placeholder-shown) + label {
+    bottom: 30px; /* Move label up when input is focused or not empty */
+    font-size: 12px; /* Decrease font size when input is focused or not empty */
+    color: #007bff; /* Change color when input is focused or not empty */
+}
+
+input:focus + label + .underline,
+textarea:focus + label + .underline,
+input:not(:placeholder-shown) + label + .underline,
+textarea:not(:placeholder-shown) + label + .underline {
+    transform: scaleX(1); /* Expand underline when input is focused or not empty */
+}
+
+/* Button styles */
+button[type="submit"] {
+    display: block; /* Display as block element */
+    width: 100%; /* Full width */
+    padding: 12px; /* Add padding */
+    background-color: #007bff; /* Set background color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add border radius */
+    font-size: 16px; /* Set font size */
+    color: #fff; /* Set text color */
+    cursor: pointer; /* Set cursor to pointer */
+    transition: background-color 0.3s; /* Add transition for smooth animation */
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3; /* Change background color on hover */
+}
+.row {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+}
+.sb{
+	margin-bottom: 20px;
+}
+    </style>
+</head>
+<body>
+	<div class="row">
+    <div class="contact-info">
+        <h2>Contact Information</h2>
+        <p>
+            <strong>Location:</strong> <br>
+            <span>&#128205;</span> Katraj,Pune,Maharashtra,India
+        </p>
+        <p>
+            <strong>Contact Number:</strong> <br>
+            <span>&#9742;</span> +918766850241
+        </p>
+        <p>
+            <strong>Email:</strong> <br>
+            <span>&#9993;</span> bhorshivnath21@gmail.com
+        </p>
+         <p>
+        <strong class="sb">Social Media:</strong>
+        <br>
+        <a class="social-link" href="www.linkedin.com/in/shivnath-bhor-9527901a4" target="_blank">
+    <i class="fab fa-linkedin fa-lg"></i>
+	</a>
+	<a class="social-link" href="YOUR_YOUTUBE_URL" target="_blank">
+    <i class="fab fa-youtube"></i>
+	</a>
+	<a class="social-link" href="https://github.com/shivbhor123" target="_blank">
+    <i class="fab fa-github"></i>
+	</a>
+	<a class="social-link" href="YOUR_FACEBOOK_URL" target="_blank">
+    <i class="fab fa-facebook"></i>
+	</a>
+
+
+
+      
+    </p>
+    </div>
+   <div class="container">
+        <h1>Contact Us</h1>
+        <form action="/submit-message" method="post">
+            <div class="form-group">
+                <div class="symbol">👤</div>
+                <input type="text" id="name" name="name" required>
+                <label for="name">Name</label>
+                <div class="underline"></div>
+            </div>
+
+            <div class="form-group">
+                <div class="symbol">✉️</div>
+                <input type="email" id="email" name="email" required>
+                <label for="email">Email</label>
+                <div class="underline"></div>
+            </div>
+
+            <div class="form-group">
+                <div class="symbol">🏢</div>
+                <input type="text" id="company" name="company">
+                <label for="company">Company Name (optional)</label>
+                <div class="underline"></div>
+            </div>
+
+            <div class="form-group">
+                <div class="symbol">✏️</div>
+                <textarea id="message" name="message" rows="5" maxlength="1000" required></textarea>
+                <label for="message">Message</label>
+                <div class="underline"></div>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    </div>
+</body>
+</html>
